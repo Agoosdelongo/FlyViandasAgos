@@ -1,0 +1,36 @@
+import random
+
+# Selecciona una palabra al azar de la lista de colores
+def seleccionar_palabra(colores):
+    return random.choice(colores)
+
+# Crea el tablero con guiones y letras acertadas
+def mostrar_tablero(palabra, letras_acertadas):
+    return " ".join(letra if letra in letras_acertadas else "_" for letra in palabra)
+
+# Lista de palabras posibles
+colores = ["rojo", "azul", "verde", "amarillo", "naranja", "violeta"]
+
+# Inicialización de variables
+letras_acertadas = []
+palabra = seleccionar_palabra(colores)
+intentos = 3
+
+# Bucle del juego
+while intentos > 0 and set(palabra) != set(letras_acertadas):
+    print("\n" + mostrar_tablero(palabra, letras_acertadas))
+    letra_ingresada = input("Adivina adivinador, ingresa una letra: ").lower()
+
+    if letra_ingresada in palabra and letra_ingresada not in letras_acertadas:
+        letras_acertadas.append(letra_ingresada)
+        print("¡Correcto! La letra '" + letra_ingresada + "' está en la palabra.")
+    elif letra_ingresada in letras_acertadas:
+        print("Ya has ingresado la letra '" + letra_ingresada + "'. Intenta con otra.")
+    else:
+        intentos -= 1
+        print("Incorrecto. Te quedan " + str(intentos) + " intentos.")
+
+if set(palabra) == set(letras_acertadas):
+    print("\n¡Felicidades! Has adivinado la palabra: " + palabra)
+else:
+    print("\n¡Se acabaron los intentos! La palabra era: " + palabra)

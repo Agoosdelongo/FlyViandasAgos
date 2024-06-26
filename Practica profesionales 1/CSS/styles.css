@@ -1,0 +1,227 @@
+/* Importa la fuente Lobster desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilos globales */
+body {
+    background-image: url('https://enelaire.mx/wp-content/uploads/image-1-1.jpg');
+    background-size: cover; /* Hace que la imagen cubra todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Hace que la imagen se mantenga fija al hacer scroll */
+    background-position: center; /* Centra la imagen en el fondo */
+    font-family: 'Roboto', sans-serif; /* Fuente principal para el cuerpo del texto */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Desplazamiento suave */
+}
+
+/* Aplica la fuente Lobster a títulos y enlaces del menú */
+h1, h2, h3, nav ul li a {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
+
+/* Estilos para la navegación */
+nav {
+    display: flex; /* Usa flexbox para el diseño del menú */
+    justify-content: space-between; /* Espacio entre logo y menú */
+    align-items: center; /* Alinea elementos verticalmente en el centro */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #ffffff96; /* Fondo del menú */
+}
+
+nav img {
+    height: 60px; /* Altura del logo */
+}
+
+nav ul {
+    list-style: none; /* Quita los puntos de la lista */
+    display: flex; /* Usa flexbox para los elementos del menú */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px; /* Espaciado entre elementos del menú */
+}
+
+nav ul li a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: rgb(0, 0, 0); /* Color del texto del menú */
+    font-size: 1.2em; /* Tamaño del texto del menú */
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    background-color: rgba(255, 255, 255, 0.68); /* Color de fondo con transparencia */
+    margin: 30px auto;
+    background-position: center; /* Centra la imagen en el fondo */
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgb(20, 20, 40);
+    padding: 20px; /* Espaciado interno */
+    padding: 100px;
+    width: 100%;
+    max-width: 750px;
+
+}
+
+/* Estilos para los títulos */
+h1, h2, h3 {
+    text-align: center; /* Centra el texto */
+    color: #000000; /* Color del texto */
+}
+
+h1 {
+    font-size: 2.5em; /* Tamaño del texto */
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em; /* Tamaño del texto */
+}
+
+h3 {
+    background-color: rgba(255, 255, 255, 0.76);
+    font-size: 1.8em; /* Tamaño del texto */
+}
+
+/* Estilos para párrafos y listas */
+p, li {
+    font-size: 16px;
+    color: #000000; /* Color del texto */
+    line-height: 1.6; /* Altura de línea para mejor legibilidad */
+}
+
+/* Estilos para el catálogo de productos */
+.catalogo {
+    background-color: #f6eee39b;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    display: flex; /* Usa flexbox para el diseño del catálogo */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
+    justify-content: space-around; /* Espacio alrededor de los elementos */
+}
+
+.item {
+    margin: 10px; /* Margen alrededor de cada elemento */
+    flex: 1 1 calc(33.333% - 20px); /* Ajusta el tamaño de los elementos del catálogo */
+    box-sizing: border-box;
+    width: calc(33.333% - 20px); /* Ancho de cada elemento */
+}
+
+.container-fotos {
+    font-family: 'Lobster', cursive;
+    background-color: #ffffffad;
+    border: 1px solid #ffffff9a;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    position: relative; /* Posición relativa para permitir la posición absoluta de elementos internos */
+    text-align: center; /* Centra el texto */
+}
+
+.container-fotos img {
+    width: 100%; /* Ancho completo de la imagen */
+    height: 200px; /* Altura automática para mantener la proporción */
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.precio {
+    font-family: 'Lobster', cursive;
+    position: absolute; /* Posición absoluta */
+    bottom: 10px; /* 10px desde la parte inferior */
+    right: 10px; /* 10px desde la derecha */
+    background-color: rgba(0, 0, 0, 0.445); /* Fondo negro semitransparente */
+    color: white; /* Color del texto */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Sección de contacto */
+.title-contact {
+    background-color: rgba(255, 255, 255, 0.817); /* Fondo negro semitransparente */
+    text-align: center; /* Centra el texto */
+    color: #000000; /* Color del texto */
+}
+
+/* Estilos para el formulario de registro */
+#registroForm {
+    font-family: 'Lobster', cursive;
+    background-color: rgba(255, 255, 255, 0.644); /* Fondo negro semitransparente */
+    display: flex; /* Usa flexbox para el diseño del formulario */
+    flex-direction: column; /* Dispone los elementos en columna */
+    align-items: center; /* Alinea los elementos en el centro */
+    margin: 20px 0; /* Margen vertical */
+}
+
+#registroForm label, #registroForm input, #registroForm button {
+    font-family: 'Lobster', cursive;
+    background-color: rgba(150, 148, 148, 0.445); /* Fondo negro semitransparente */
+    width: 80%; /* Ancho del 80% */
+    margin: 10px 0; /* Margen vertical */
+    padding: 10px; /* Espaciado interno */
+    font-size: 1em; /* Tamaño del texto */
+    cursor: pointer;
+}
+
+#registroForm button {
+    background-color: #c3a86fc5; /* Color de fondo */
+    color: rgb(0, 0, 0); /* Color del texto */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.social-logo {
+    width: 40px; /* Ancho de los logos de redes sociales */
+    margin: 10px; /* Margen alrededor */
+}
+
+/* Mapa redondo */
+.map-container {
+    display: flex; /* Usa flexbox para el diseño del contenedor del mapa */
+    justify-content: center; /* Centra el mapa horizontalmente */
+    margin-top: 20px; /* Margen superior */
+}
+
+.map-container iframe {
+    width: 700px; /* Ancho del mapa */
+    height: 300px; /* Altura del mapa */
+    border-radius: 0%; /* Bordes redondeados en forma de círculo */
+    border: 3px solid #ffffff; /* Borde del mapa */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .catalogo .item {
+        width: calc(50% - 20px); /* Ancho del 50% para pantallas medianas */
+    }
+
+    nav ul {
+        flex-direction: column; /* Dispone los elementos del menú en columna */
+        align-items: center; /* Alinea los elementos en el centro */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Margen vertical para los elementos del menú */
+    }
+
+    .map-container iframe {
+        width: 250px; /* Ancho del mapa para pantallas medianas */
+        height: 250px; /* Altura del mapa para pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .catalogo .item {
+        width: 100%; /* Ancho completo para pantallas pequeñas */
+    }
+
+    .map-container iframe {
+        width: 200px; /* Ancho del mapa para pantallas pequeñas */
+        height: 200px; /* Altura del mapa para pantallas pequeñas */
+    }
+}
